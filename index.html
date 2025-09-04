@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Munthala Lakshmi Tejaswi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio — Munthala Lakshmi Tejaswi" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --mono: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{
+      height:100%;
+      scroll-behavior:smooth;
+    }
+    body{
+      font-family:var(--mono);
+      background:linear-gradient(180deg,var(--bg),#071020);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Navbar */
+    nav{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      background:rgba(15,23,36,0.9);
+      backdrop-filter:blur(6px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 40px;
+      z-index:1000;
+    }
+    nav h2{
+      font-size:18px;
+      font-weight:700;
+      color:var(--accent);
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+    }
+    nav ul li a{
+      text-decoration:none;
+      color:#e6eef6;
+      font-weight:600;
+      font-size:14px;
+      transition:color 0.3s;
+    }
+    nav ul li a:hover{
+      color:var(--accent);
+    }
+
+    /* Full-page sections */
+    section{
+      min-height:100vh;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:100px 20px 40px; /* extra top padding for navbar */
+    }
+    .wrap{
+      width:100%;
+      max-width:1000px;
+    }
+
+    header{text-align:center;}
+    header h1{font-size:32px;margin-bottom:12px}
+    header p{color:var(--muted);font-size:16px;margin-bottom:12px}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px 16px;border-radius:10px;font-weight:600;color:var(--accent);cursor:pointer;margin:4px}
+    .cv{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);text-decoration:none;color:var(--accent);font-weight:700}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:24px;border:1px solid rgba(255,255,255,0.03)}
+    .heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .heading h3{margin:0;font-size:20px}
+    .muted{color:var(--muted);font-size:14px}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* Projects */
+    .projects{display:grid;gap:14px}
+    .proj{display:flex;gap:14px;align-items:flex-start}
+    .proj-thumb{width:100px;height:70px;border-radius:10px;background:linear-gradient(135deg,#0b1220,#12202b);display:grid;place-items:center;font-weight:700;color:var(--muted);font-size:12px}
+    .proj-body h4{margin:0 0 6px;font-size:16px}
+    .proj-body p{margin:0;color:var(--muted);font-size:14px}
+    .links{margin-top:8px}
+    .link{font-size:14px;color:var(--accent);font-weight:700;text-decoration:none}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+    .item .meta{font-size:13px;color:var(--muted)}
+
+    footer{text-align:center;padding:20px;font-size:14px;color:var(--muted)}
+
+    /* Fade-in animation */
+    .fade{opacity:0;transform:translateY(20px);animation:fadeIn .7s ease forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+
+    /* Skills Section with Bars */
+    
+    
+      .skill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #6C63FF;
+  border-radius: 10px 0 0 10px;
+}
+.tech-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tech-list li {
+  
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.tech-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-btn {
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.tech-btn:hover {
+  background-color: #5750d4;
+}
+.proj-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: #000; /* make text black */
+}
+
+.proj-card h4 {
+  margin-bottom: 10px;
+  color: #000; /* heading black */
+}
+
+.proj-card p {
+  color: #000; /* paragraph black */
+}
+
+.proj-details strong {
+  color: #000; /* bold text black */
+}
+
+.proj-details ul li {
+  color: #000; /* list items black */
+}
+
+.proj-links .link {
+  background-color: #6C63FF;
+  color: #fff; /* keep link text white for contrast */
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+.proj-links .link:hover {
+  background-color: #5750d4;
+}
+
+.view-all .link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #6C63FF; /* button color */
+}
+
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px; /* spacing from contact info */
+  }
+
+  .contact-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form button {
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+
+  /* Optional: spacing between contact info links */
+  .card p {
+    margin: 5px 0;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Munthala Lakshmi Tejaswi</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience-intern">Experience & Intern</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Certificate</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: Intro -->
+  <section id="home">
+    <div class="wrap fade">
+      <header>
+        <h1>Munthala Lakshmi Tejaswi</h1>
+        <p>B.Tech (CSE) • Full-stack developer • Web Developer</p>
+        <p class="small">Hyderabad, India</p>
+        <button class="btn" onclick="copyEmail()">Email</button>
+        <a class="btn" href="#" onclick="downloadCV()">Download CV</a>
+      </header>
+    </div>
+  </section>
+
+  <!-- Section 2: About -->
+  <section id="about">
+    <div class="wrap fade">
+      <div class="card">
+        <div class="heading"><h3>About</h3><span class="muted">Summary</span></div>
+        <p class="small"> I am Munthala Lakshmi Tejaswi, a B.Tech Computer Science and Engineering student pursuing my degree at Mohan Babu University (2026 pass out) with strong skills in full-stack web development, AI/ML, and problem-solving. I have hands-on experience through internships and projects, building scalable applications like an e-commerce platform, a Netflix-style app, and a personal AI assistant. <br><br>I enjoy turning ideas into real-world solutions and continuously upskilling through certifications and coding platforms like CodeChef, HackerRank, and LeetCode.</p>
+        <br>
+        <a class="cv" href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597" target="_blank">View Detailed Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Education -->
+  <section id="education">
+  <div class="wrap fade">
+    <div class="heading" style="margin-bottom: 20px;">
+      <h3>Education</h3>
+      <span class="muted">Academic</span>
+    </div>
+    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+      <div class="card" style="flex: 1; min-width: 250px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px;">
+        <div class="heading"><h3>B.Tech — Computer Science and Engineering</h3></div>
+        <p><span class="muted">2022 – 2026</span></p>
+        <p>Mohan Babu University, Tirupati • CGPA: 9.52</p>
+      </div>
+      <div class="card" style="flex: 1; min-width: 250px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px;">
+        <div class="heading"><h3>Board of Intermediate Education, AP</h3></div>
+        <p><span class="muted">2020 – 2022</span></p>
+        <p>Sri Chaitanya Junior College, Tirupati • 84%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section 4: Skills -->
+  
+   <section id="skills">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading"><h3>Skills</h3><span class="muted">Tools & Languages</span></div>
+      <div class="skills">
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Java</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">HTML & CSS</span>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Data Structures & Algorithms</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">SQL & MySQL</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Python</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Spring Boot</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Git & GitHub</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Docker</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="technologies">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading"><h3>Technologies I Work With</h3></div>
+      <div class="tech-buttons">
+        <button class="tech-btn">HTML</button>
+        <button class="tech-btn">CSS</button>
+        <button class="tech-btn">JavaScript</button>
+        <button class="tech-btn">Java & DSA</button>
+        <button class="tech-btn">Node.js</button>
+        <button class="tech-btn">Docker</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+</section>
+
+
+
+  <!-- Section 5: Projects -->
+  <section id="projects">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading">
+        <h3>Featured Projects</h3>
+        <span class="muted">Here are some of the projects I've built to strengthen my technical and problem-solving skills.</span>
+      </div>
+      <div class="projects">
+
+        <!-- Farmers E-commerce Project -->
+        <article class="proj-card">
+          <h4>E-commerce Platform for Farmers</h4>
+          <p>A comprehensive e-commerce website designed specifically for farmers to sell their products directly to consumers. Features secure payment processing, user authentication, product catalog management, and order tracking.</p>
+          <div class="proj-details">
+            <strong>Key Features:</strong>
+            <ul>
+              <li>Secure Transactions</li>
+              <li>User Authentication</li>
+              <li>Product Management</li>
+              <li>Order Tracking</li>
+            </ul>
+            <strong>Technologies Used:</strong>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="proj-links">
+            <a class="link" href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank">Code</a>
+            <!-- Add Live Demo link if available -->
+             <a class="link" href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597?p=1a2556f741728045966cc71d3f784f5c&pm=c" target="_blank">Demo</a>
+          </div>
+        </article>
+
+        <!-- Mini Netflix Project -->
+        <article class="proj-card">
+          <h4>Mini Netflix Clone — Cinevault</h4>
+          <p>A streaming application clone with user authentication, movie library browsing, search functionality, and responsive design. Implements user profiles and watchlist features.</p>
+          <div class="proj-details">
+            <strong>Key Features:</strong>
+            <ul>
+              <li>User Authentication</li>
+              <li>Movie Library</li>
+              <li>Search & Filter</li>
+              <li>Responsive Design</li>
+            </ul>
+            <strong>Technologies Used:</strong>
+            <ul>
+               <li>Andriod Studio</li>
+              <li>Java</li>
+              <li>Xml</li>
+            </ul>
+          </div>
+          <div class="proj-links">
+            <a class="link" href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank">Code</a>
+            <a class="link" href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597?p=1dc556f741728076a67eec1f885227d7&pm=c" target="_blank">Demo</a>
+          </div>
+        </article>
+
+        <!-- Jarvis Voice Assistant Project -->
+        <article class="proj-card">
+          <h4>Jarvis — AI Voice Assistant</h4>
+          <p>A personal AI voice assistant that processes voice commands, fetches real-time information, opens apps, and performs smart automation tasks.</p>
+          <div class="proj-details">
+            <strong>Key Features:</strong>
+            <ul>
+              <li>Voice Commands</li>
+              <li>Weather Updates</li>
+              <li>App Control</li>
+              <li>Real-time Responses</li>
+            </ul>
+            <strong>Technologies Used:</strong>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Speech Recognition API</li>
+            </ul>
+          </div>
+          <div class="proj-links">
+            <a class="link" href="https://github.com/Munthalalakshmi-tejaswi/Jarvis" target="_blank">Code</a>
+             <a class="link" href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597?p=224556f7417280979d14db73cdab8f22&pm=c" target="_blank">Demo</a>
+          </div>
+        </article>
+
+      </div>
+      <div class="view-all">
+        <a class="link" href="https://github.com/Munthalalakshmi-tejaswi?tab=repositories">View All Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Section 6: Experience -->
+  <section id="experience-intern">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading">
+        <h3>Experience & Intern</h3>
+        <span class="muted">Highlights & Internship</span>
+      </div>
+      <div class="timeline">
+        <!-- AICTE Eduskills Internship -->
+        <div class="item">
+          <strong>Intern – AICTE (EduSkills)</strong> <span class="muted">Mar 2025</span>
+          <div class="meta">Successfully completed a 10-week virtual internship in AI & ML, gaining practical knowledge of AI/ML tools, concepts, and real-world applications.</div>
+          <p class="small">Worked on AI/ML tasks including data processing, feature engineering, and applied problem-solving.</p>
+        </div>
+
+        <!-- Internshala Web Development Internship -->
+        <div class="item">
+          <strong>Summer Intern – Internshala Training</strong> <span class="muted">June 2024</span>
+          <div class="meta">Completed a 6-month web development internship, delivering 5+ projects and 2 full applications.</div>
+          <p class="small">Focused on front-end and back-end development, web design, project implementation, and deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Certifications -->
+<section id="certifications">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading">
+        <h3>Certifications</h3>
+        <span class="muted">Professional Certifications</span>
+      </div>
+      <div class="timeline">
+        <div class="item">
+          <strong>Infosys Springboard:</strong> Java SE 8 Features Certificate <span class="muted">Sep 2024</span>
+        </div>
+        <div class="item">
+          <strong>Cisco Networking Academy:</strong> Cybersecurity Certificate <span class="muted">Jan 2025</span>
+        </div>
+        <div class="item">
+          <strong>NPTEL Swayam:</strong> Python for Data Science - Elite Certification <span class="muted">Jul 2024</span>
+        </div>
+        <div class="item">
+          <strong>NareshIT:</strong> Python (Concepts, OOP, File Handling) Course Completion Certificate <span class="muted">Aug 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Achievements -->
+<section id="achievements">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading">
+        <h3>Achievements</h3>
+        <span class="muted">Recognitions & Milestones</span>
+      </div>
+      <div class="timeline">
+        <div class="item">
+          <strong>CodeChef:</strong> Solved 200+ problems, achieving a maximum rating of 800+
+        </div>
+        <div class="item">
+          <strong>NPTEL Swayam:</strong> Achieved Programming in Java – Elite + Silver Certification
+        </div>
+        <div class="item">
+          <strong>HackerRank:</strong> Earned SQL (Intermediate) Certificate
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Section 8: Contact -->
+  <section id="contact">
+  <div class="wrap fade">
+    <div class="card">
+      <div class="heading">
+        <h3>Contact</h3>
+        <span class="muted">Get in touch</span>
+      </div>
+
+      <!-- Contact Info -->
+      <p>Email: <a class="link" href="mailto:mltejaswi1@gmail.com">mltejaswi1@gmail.com</a></p>
+      <p>LinkedIn: <a class="link" href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi-70a4192a6/">Profile</a></p>
+      <p>GitHub: <a class="link" href="https://github.com/Munthalalakshmi-tejaswi">Projects</a></p>
+
+      <!-- Contact Form -->
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+  <!-- Section 9: Footer -->
+  <section>
+    <footer class="fade">© Munthala Lakshmi Tejaswi | Thanks for visiting 🚀</footer>
+  </section>
+
+  <script>
+    function copyEmail(){
+      const email = "mltejaswi1@gmail.com";
+      navigator.clipboard.writeText(email).then(()=>{
+        alert("Email copied: " + email);
+      });
+    }
+    function downloadCV(){
+      const resumeUrl = "https://github.com/Munthalalakshmi-tejaswi/Resume/blob/main/TejaswiResumeN2%20(8).pdf";
+      window.open(resumeUrl, "_blank");
+    }
+  </script>
+</body>
+</html>
