@@ -23,7 +23,7 @@
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
-        /* Modal Animation */
+        /* Modal Visibility */
         #contactModal.hidden { display: none; }
     </style>
 </head>
@@ -37,7 +37,7 @@
                 <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
                 <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
                 <a href="#coding-stats" class="hover:text-indigo-400 transition">Coding</a>
-                <button onclick="toggleModal()" class="bg-indigo-600 px-5 py-2 rounded-full hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20 text-white">Contact</button>
+                <button onclick="toggleModal()" class="bg-indigo-600 px-5 py-2 rounded-full hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20 text-white font-bold">Contact</button>
             </div>
         </div>
     </nav>
@@ -97,13 +97,13 @@
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <div class="flex justify-between items-start mb-8"><i class="fas fa-film text-2xl text-cyan-400"></i></div>
                     <h4 class="text-xl font-bold mb-4 uppercase">Cinevault App</h4>
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">A Netflix-style movie platform built with Java/Android Studio featuring watchlists and high-fidelity UI.</p>
+                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">A Netflix-style movie platform built with Java/Android Studio.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank" class="text-xs font-black border-b-2 border-cyan-500 pb-1 hover:text-cyan-300 transition-colors uppercase">View Repository</a>
                 </div>
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <div class="flex justify-between items-start mb-8"><i class="fas fa-leaf text-2xl text-emerald-400"></i></div>
                     <h4 class="text-xl font-bold mb-4 uppercase">Farmers E-Market</h4>
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">Direct-to-consumer platform for farmers to sell goods, eliminating middlemen using Java/SQL.</p>
+                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">Direct-to-consumer platform for farmers to sell goods using Java/SQL.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank" class="text-xs font-black border-b-2 border-emerald-500 pb-1 hover:text-emerald-300 transition-colors uppercase">View Repository</a>
                 </div>
             </div>
@@ -150,20 +150,22 @@
     <div id="contactModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
         <div class="bg-white w-full max-w-2xl rounded-[2rem] overflow-hidden relative shadow-2xl">
             <button onclick="toggleModal()" class="absolute top-4 right-6 text-slate-400 hover:text-indigo-600 text-4xl font-light">&times;</button>
+            
             <div class="p-1 bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUfD-yqE0kM-mC9z9p4j1L8mY-uA/viewform?embedded=true" 
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6fM91qnjQ6HF_kVJDUwyr4kXvoZrRl33-TEn9OvgGRTGmhg/viewform?embedded=true" 
                     width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </div>
 
     <script>
-        // Modal Control
+        // Function to show/hide the contact modal
         function toggleModal() {
             const modal = document.getElementById('contactModal');
             modal.classList.toggle('hidden');
         }
 
-        // Close modal on outside click
+        // Close modal when clicking outside the box
         window.onclick = function(event) {
             const modal = document.getElementById('contactModal');
             if (event.target == modal) {
@@ -171,7 +173,7 @@
             }
         }
 
-        // GitHub API Integration
+        // GitHub API Integration to fetch repositories
         async function fetchRepos() {
             const container = document.getElementById('github-repos');
             try {
