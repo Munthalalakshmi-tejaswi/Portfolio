@@ -13,8 +13,7 @@
         .hero-bg { background: radial-gradient(circle at top right, #1e1b4b, #0f172a); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .project-card:hover { transform: translateY(-8px); border-color: #6366f1; background: rgba(30, 41, 59, 0.6); }
-        .skill-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-        .skill-progress { height: 100%; background: linear-gradient(90deg, #6366f1, #22d3ee); border-radius: 10px; }
+        .skill-tag { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; color: #a5b4fc; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
@@ -28,7 +27,7 @@
             <div class="space-x-8 hidden md:flex items-center text-xs font-bold uppercase tracking-widest text-slate-400">
                 <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
                 <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
-                <a href="#coding-stats" class="hover:text-indigo-400 transition">Coding</a>
+                <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
                 <button onclick="toggleModal()" class="bg-indigo-600 px-5 py-2 rounded-full hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20 text-white font-bold">Contact</button>
             </div>
         </div>
@@ -40,15 +39,24 @@
             <h2 class="text-6xl md:text-8xl font-black mt-8 mb-4 uppercase tracking-tighter leading-none">
                 Munthala Lakshmi <br><span class="gradient-text">Tejaswi</span>
             </h2>
-            <div class="flex flex-col items-center gap-4 mb-12">
-                <button onclick="toggleModal()" class="bg-white text-indigo-900 px-10 py-4 rounded-full font-black hover:bg-indigo-50 transition shadow-xl flex items-center gap-3 group tracking-widest text-sm">
-                    <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-                    CONTACT ME
-                </button>
+            
+            <div class="flex flex-col items-center gap-6 mb-12">
+                <div class="flex gap-4">
+                    <button onclick="toggleModal()" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-black hover:bg-indigo-500 transition shadow-xl flex items-center gap-3 group tracking-widest text-xs">
+                        <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                        GET IN TOUCH
+                    </button>
+                    <a href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597" target="_blank" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-full font-black hover:bg-white/20 transition flex items-center gap-3 tracking-widest text-xs">
+                        <i class="fas fa-external-link-alt"></i>
+                        DETAILED INFO (NOTION)
+                    </a>
+                </div>
             </div>
+
             <p class="text-slate-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed font-light">
-                Aspiring <span class="text-white font-medium">Software Engineer</span> specializing in Java Full-stack and AI/ML.
+                Aspiring <span class="text-white font-medium">Software Engineer</span> specializing in Java Full-stack and AI/ML. 9.5 CGPA @ Mohan Babu University.
             </p>
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto bg-slate-900/40 p-8 rounded-[2.5rem] border border-slate-800/50 backdrop-blur-xl">
                 <div><p class="text-3xl font-black text-white">9.52</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CGPA</p></div>
                 <div><p class="text-3xl font-black text-white">400+</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">DSA Solved</p></div>
@@ -58,23 +66,82 @@
         </div>
     </section>
 
+    <section id="skills" class="py-20 px-6 bg-slate-900/20">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center underline decoration-indigo-500 underline-offset-8">Technical Expertise</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-code text-indigo-400"></i> Languages</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Java</span><span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span><span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-layer-group text-cyan-400"></i> Full Stack</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">HTML/CSS</span><span class="skill-tag">TailwindCSS</span>
+                        <span class="skill-tag">Node.js</span><span class="skill-tag">SQL</span><span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-tools text-emerald-400"></i> Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Git</span><span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Power BI</span><span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Featured Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <h4 class="text-xl font-bold mb-4 uppercase">Jarvis AI Assistant</h4>
-                    <p class="text-slate-400 text-sm mb-8">Voice/Chat AI with automation.</p>
+                    <p class="text-slate-400 text-sm mb-8">AI voice-controlled assistant with real-time task automation.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/Jarvis" target="_blank" class="text-xs font-black border-b-2 border-indigo-500 pb-1">VIEW REPO</a>
                 </div>
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
-                    <h4 class="text-xl font-bold mb-4 uppercase">Cinevault App</h4>
-                    <p class="text-slate-400 text-sm mb-8">Java/Android Movie Platform.</p>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Cinevault (Netflix)</h4>
+                    <p class="text-slate-400 text-sm mb-8">Full-stack movie streaming app with authentication and categorized content.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank" class="text-xs font-black border-b-2 border-cyan-500 pb-1">VIEW REPO</a>
                 </div>
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <h4 class="text-xl font-bold mb-4 uppercase">Farmers E-Market</h4>
-                    <p class="text-slate-400 text-sm mb-8">Direct-to-consumer Java platform.</p>
+                    <p class="text-slate-400 text-sm mb-8">Direct-to-consumer platform for farmers with secure payment integration.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank" class="text-xs font-black border-b-2 border-emerald-500 pb-1">VIEW REPO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20 px-6 bg-slate-900/10">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Credentials</h3>
+            <div class="space-y-4">
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Oracle Cloud AI Foundations Associate</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Oracle • Sep 2025</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Java Full Stack (TalentNext)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Wipro • Oct 2025</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Programming in Java (Elite+Silver)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">NPTEL Swayam • Apr 2024</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
                 </div>
             </div>
         </div>
@@ -100,6 +167,11 @@
     </div>
 
     <footer class="py-16 text-center border-t border-slate-900 bg-[#070c18]">
+        <div class="flex justify-center gap-6 mb-8 text-slate-400">
+            <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Munthalalakshmi-tejaswi" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+            <a href="mailto:mltejaswi1@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+        </div>
         <p class="text-[10px] text-slate-700 uppercase tracking-[0.4em]">© 2026 MUNTHALA LAKSHMI TEJASWI</p>
     </footer>
 
@@ -116,7 +188,6 @@
                 document.body.style.overflow = 'auto';
             }
         }
-        // Close on outside click
         window.onclick = function(event) {
             const modal = document.getElementById('contactModal');
             if (event.target == modal) toggleModal();
