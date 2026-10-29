@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jarvis voice assistant and AI chat projects by Munthala Lakshmi Tejaswi.">
+    <title>Jarvis AI Assistant | Munthala Lakshmi Tejaswi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .detail-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 14px 40px rgba(15, 23, 42, .05); }
+        .detail-link { color: #166534; font-weight: 700; }
+        .detail-link:hover { color: #14532d; }
+        .detail-tag { color: #166534; background: #f0fdf4; border: 1px solid #dcfce7; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+    <header class="border-b border-slate-200 bg-white/95">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html#projects" class="font-extrabold tracking-tight text-green-800">MLT<span class="text-slate-400">.</span></a>
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-green-800"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+        <div class="mb-10">
+            <p class="text-xs font-extrabold tracking-[0.28em] uppercase text-green-700 mb-4">Project details</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Jarvis AI Assistant</h1>
+        </div>
+
+        <article class="detail-card rounded-3xl p-6 md:p-10">
+            <div class="grid md:grid-cols-[minmax(0,1fr)_260px] gap-8 items-center">
+                <div>
+                    <span class="detail-tag inline-flex rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Voice + AI chat</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-4">A hands-free assistant with useful everyday tools</h2>
+                    <p class="mt-4 leading-relaxed text-slate-600">Jarvis is a voice-controlled assistant built with HTML, CSS, and JavaScript in its browser version. It combines speech recognition, spoken responses, and interface updates. Related project versions add AI chat capabilities and a Python-and-SQL implementation.</p>
+                </div>
+                <img src="../assets/jarvis-assistant.gif" alt="Animated digital assistant visualization" class="w-full max-w-[260px] mx-auto h-auto rounded-2xl border border-slate-800 bg-slate-950 shadow-lg">
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Project demo videos</h3>
+                <p class="text-sm text-slate-600 mt-2 mb-5">Watch the different Jarvis and chat-mode implementations.</p>
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                        <video class="w-full aspect-video bg-slate-950 object-contain" controls preload="metadata" playsinline poster="../assets/jarvis-chatmode-poster.jpg" aria-label="Jarvis and AI chat mode demonstration">
+                            <source src="../assets/jarvis-and-chatmode-demo.mp4" type="video/mp4">
+                            Your browser does not support embedded video.
+                        </video>
+                        <figcaption class="p-4"><span class="block font-bold text-slate-900">Jarvis + AI Chat Mode</span><span class="block text-xs text-slate-500 mt-1">Voice assistant and chat-mode walkthrough.</span></figcaption>
+                    </figure>
+                    <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                        <video class="w-full aspect-video bg-slate-950 object-contain" controls preload="metadata" playsinline poster="../assets/jarvis-python-poster.jpg" aria-label="Jarvis using Python demonstration">
+                            <source src="../assets/jarvis-python-demo.mp4" type="video/mp4">
+                            Your browser does not support embedded video.
+                        </video>
+                        <figcaption class="p-4"><span class="block font-bold text-slate-900">Jarvis using Python</span><span class="block text-xs text-slate-500 mt-1">Python assistant demo.</span></figcaption>
+                    </figure>
+                    <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                        <video class="w-full aspect-video bg-slate-950 object-contain" controls preload="metadata" playsinline poster="../assets/jarvis-python-sql-poster.jpg" aria-label="Jarvis using Python and SQL demonstration">
+                            <source src="../assets/jarvis-python-sql-demo.mp4" type="video/mp4">
+                            Your browser does not support embedded video.
+                        </video>
+                        <figcaption class="p-4"><span class="block font-bold text-slate-900">Jarvis using Python &amp; SQL</span><span class="block text-xs text-slate-500 mt-1">Python assistant with SQL-backed data.</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">What it can do</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-microphone text-green-700 mr-2"></i>Voice and chat</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Listen to spoken commands, accept typed messages in chat-enabled versions, and respond with text, voice, and UI updates. The assistant can greet users and answer AI or general knowledge questions.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-globe text-green-700 mr-2"></i>Website controls</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Open Google, YouTube, Facebook, Instagram, WhatsApp Web, Wikipedia, and YouTube Music with voice commands.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-wand-magic-sparkles text-green-700 mr-2"></i>Everyday utilities</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Report the current time and date, calculate simple expressions, check battery level and charging status, and search Google when a command is not recognized.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-list-check text-green-700 mr-2"></i>Helpful extras</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Look up country facts such as capital, currency, region, population, and languages; add tasks to a to-do list with voice confirmation; and tell programming or student-friendly jokes.</p></div>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Example commands</h3>
+                <div class="overflow-x-auto mt-4 rounded-2xl border border-slate-200">
+                    <table class="w-full min-w-[520px] text-left text-sm">
+                        <thead class="bg-green-50 text-slate-800"><tr><th class="px-4 py-3 font-bold">Say or type</th><th class="px-4 py-3 font-bold">Jarvis responds by</th></tr></thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Open Google” / “Open YouTube”</td><td class="px-4 py-3">Speaking a confirmation and opening the requested site.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Time” / “Date”</td><td class="px-4 py-3">Reporting the current time or date.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Calculate 5+5”</td><td class="px-4 py-3">Evaluating a simple math expression.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Battery”</td><td class="px-4 py-3">Showing battery percentage and charging status where supported.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Tell me about Japan”</td><td class="px-4 py-3">Sharing country facts, including capital, currency, region, population, and languages.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Add task finish assignment”</td><td class="px-4 py-3">Adding a task to the to-do list and confirming it by voice.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“Joke” / “Jokes for students”</td><td class="px-4 py-3">Telling a programming joke or a student-friendly joke.</td></tr>
+                            <tr><td class="px-4 py-3 font-medium text-slate-800">“What is AI?” or another query</td><td class="px-4 py-3">Providing an answer in AI chat mode or searching Google for an unrecognized command.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">How to use the browser version</h3>
+                <ol class="grid sm:grid-cols-3 gap-3 mt-4 text-sm text-slate-600">
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">01</span>Open <code class="text-slate-800">index.html</code> in Chrome or Edge.</li>
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">02</span>Click the microphone button or type a message in chat mode.</li>
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">03</span>Try a command above and follow Jarvis’s voice and on-screen response.</li>
+                </ol>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Project repositories</h3>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">These repositories cover the related Jarvis, AI chat mode, and Python/SQL implementations.</p>
+                <div class="grid sm:grid-cols-3 gap-3 mt-4">
+                    <a class="rounded-2xl border border-slate-200 p-4 hover:border-green-300 hover:bg-green-50/50 transition" href="https://github.com/Munthalalakshmi-tejaswi/Both-Jarvis-and-AI-chat-mode" target="_blank" rel="noopener noreferrer"><span class="block font-bold text-slate-900">Jarvis + AI Chat Mode</span><span class="block text-xs text-slate-500 mt-1">Combined assistant and chat project</span><span class="detail-link inline-flex items-center gap-2 text-xs mt-3">View repository <i class="fas fa-arrow-up-right-from-square"></i></span></a>
+                    <a class="rounded-2xl border border-slate-200 p-4 hover:border-green-300 hover:bg-green-50/50 transition" href="https://github.com/Munthalalakshmi-tejaswi/AIChatMode" target="_blank" rel="noopener noreferrer"><span class="block font-bold text-slate-900">AIChatMode</span><span class="block text-xs text-slate-500 mt-1">AI chat implementation</span><span class="detail-link inline-flex items-center gap-2 text-xs mt-3">View repository <i class="fas fa-arrow-up-right-from-square"></i></span></a>
+                    <a class="rounded-2xl border border-slate-200 p-4 hover:border-green-300 hover:bg-green-50/50 transition" href="https://github.com/Munthalalakshmi-tejaswi/Jarvis_using_PythonandSql" target="_blank" rel="noopener noreferrer"><span class="block font-bold text-slate-900">Jarvis using Python &amp; SQL</span><span class="block text-xs text-slate-500 mt-1">Python and SQL implementation</span><span class="detail-link inline-flex items-center gap-2 text-xs mt-3">View repository <i class="fas fa-arrow-up-right-from-square"></i></span></a>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="border-t border-slate-200 bg-slate-50 py-8 text-center text-xs text-slate-500">
+        <a href="../index.html#projects" class="font-semibold text-green-800 hover:text-green-900">← Return to all projects</a>
+    </footer>
+</body>
+</html>

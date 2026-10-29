@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineVault Mini Netflix Android app built with Java, RecyclerView, and VideoView by Munthala Lakshmi Tejaswi.">
+    <title>CineVault Mini Netflix | Munthala Lakshmi Tejaswi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .detail-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 14px 40px rgba(15, 23, 42, .05); }
+        .detail-link { color: #166534; font-weight: 700; }
+        .detail-link:hover { color: #14532d; }
+        .detail-tag { color: #166534; background: #f0fdf4; border: 1px solid #dcfce7; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+    <header class="border-b border-slate-200 bg-white/95">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html#projects" class="font-extrabold tracking-tight text-green-800">MLT<span class="text-slate-400">.</span></a>
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-green-800"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-14 md:py-20">
+        <div class="mb-10">
+            <p class="text-xs font-extrabold tracking-[0.28em] uppercase text-green-700 mb-4">Project details</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">CineVault · Mini Netflix</h1>
+        </div>
+        <article id="cinevault" class="detail-card scroll-mt-8 rounded-3xl p-6 md:p-10">
+            <div class="grid md:grid-cols-[minmax(0,1fr)_240px] gap-8 items-center">
+                <div>
+                    <p class="text-xs font-extrabold tracking-[0.2em] uppercase text-green-700">Android application · Java</p>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Browse movie trailers. Play them instantly.</h2>
+                    <p class="mt-5 leading-relaxed text-slate-600">CineVault (Mini Netflix) is a dark-themed Android application for browsing a curated catalog of movies, viewing each movie’s details, and playing its trailer in the app. The project demonstrates RecyclerView-based lists, serializable data passing, and Android video playback.</p>
+                </div>
+                <img src="../assets/cinevault-logo.jpg" alt="CineVault movie app logo" class="w-full max-w-[240px] mx-auto aspect-square object-cover rounded-3xl border border-slate-200 shadow-md">
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">App experience</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Splash screen</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Opens with branded launch screen and a three-second transition.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Home menu</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Provides navigation to Browse, Search, and Profile.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Movie catalog</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Displays five selected movies with posters in a scrollable list.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Details and playback</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Selecting a movie opens its details and plays the trailer with built-in Play, Pause, and Seek controls.</p></div>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Tech stack</h3>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Java</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Android</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">XML layouts</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">RecyclerView</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">VideoView</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">MediaController</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Gradle 8.8</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Android API 35+</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">MIT License</span>
+                </div>
+                <p class="text-sm text-slate-600 mt-4">The layout uses ConstraintLayout and LinearLayout. A custom RecyclerView adapter renders the catalog; Serializable movie data is passed to the detail screen, where VideoView and MediaController handle playback.</p>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Project structure</h3>
+                <dl class="grid sm:grid-cols-2 gap-x-8 gap-y-4 mt-4 text-sm">
+                    <div><dt class="font-semibold text-slate-900">SplashActivity.java</dt><dd class="text-slate-600 mt-1">Launch screen and transition into the app.</dd></div>
+                    <div><dt class="font-semibold text-slate-900">MoviesListActivity.java</dt><dd class="text-slate-600 mt-1">Movie catalog displayed with RecyclerView.</dd></div>
+                    <div><dt class="font-semibold text-slate-900">MovieDetailActivity.java</dt><dd class="text-slate-600 mt-1">Movie descriptions and trailer playback.</dd></div>
+                    <div><dt class="font-semibold text-slate-900">Movie.java</dt><dd class="text-slate-600 mt-1">Serializable movie data model.</dd></div>
+                    <div><dt class="font-semibold text-slate-900">res/raw/</dt><dd class="text-slate-600 mt-1">Local MP4 trailer files.</dd></div>
+                    <div><dt class="font-semibold text-slate-900">res/drawable/</dt><dd class="text-slate-600 mt-1">Movie poster images.</dd></div>
+                </dl>
+            </div>
+
+            <a class="inline-flex items-center gap-2 mt-8 detail-link" href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank" rel="noopener noreferrer">View CineVault source on GitHub <i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+        </article>
+    </main>
+    <footer class="border-t border-slate-200 bg-slate-50 py-8 text-center text-xs text-slate-500">
+        <a href="../index.html#projects" class="font-semibold text-green-800 hover:text-green-900">← Return to all projects</a>
+    </footer>
+</body>
+</html>

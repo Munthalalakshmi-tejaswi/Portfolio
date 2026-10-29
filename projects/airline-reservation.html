@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SQL-based airline reservation and flight management database project by Munthala Lakshmi Tejaswi.">
+    <title>Airline Reservation System | Munthala Lakshmi Tejaswi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .detail-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 14px 40px rgba(15, 23, 42, .05); }
+        .detail-link { color: #166534; font-weight: 700; }
+        .detail-link:hover { color: #14532d; }
+        .detail-tag { color: #166534; background: #f0fdf4; border: 1px solid #dcfce7; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+    <header class="border-b border-slate-200 bg-white/95">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html#projects" class="font-extrabold tracking-tight text-green-800">MLT<span class="text-slate-400">.</span></a>
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-green-800"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+        <div class="mb-10">
+            <p class="text-xs font-extrabold tracking-[0.28em] uppercase text-green-700 mb-4">Project details</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Airline Reservation System</h1>
+        </div>
+
+        <article class="detail-card rounded-3xl p-6 md:p-10">
+            <div class="grid md:grid-cols-[minmax(0,1fr)_280px] gap-8 items-center">
+                <div>
+                    <span class="detail-tag inline-flex rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">SQL · MySQL</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-4">Scalable Airline Reservation &amp; Flight Management System</h2>
+                    <p class="mt-4 leading-relaxed text-slate-600">A SQL-based project that models core airline operations, from airport and aircraft records to flight scheduling, passenger bookings, seat assignment, and payments. Stored procedures and triggers automate booking rules, while SQL queries produce operational and revenue reports.</p>
+                    <div class="flex flex-wrap gap-2 mt-5"><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">MySQL</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Relational database</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Stored procedures</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Triggers</span></div>
+                </div>
+                <img src="../assets/airline-reservation-preview.png" alt="MySQL Workbench showing the airline reservation database tables" class="w-full max-w-[280px] max-h-72 mx-auto object-contain rounded-2xl border border-slate-200 bg-white shadow-sm">
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Database structure</h3>
+                <p class="text-sm text-slate-600 mt-2">Seven related entities model the main reservation lifecycle.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Airports</h4><p class="text-xs text-slate-600 mt-1">Name, city, country, and airport code.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Aircraft &amp; seats</h4><p class="text-xs text-slate-600 mt-1">Aircraft models, capacity, seat numbers, and cabin class.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Flights</h4><p class="text-xs text-slate-600 mt-1">Flight numbers, routes, schedules, assigned aircraft, and status.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Passengers</h4><p class="text-xs text-slate-600 mt-1">Passenger identity and contact records.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Bookings</h4><p class="text-xs text-slate-600 mt-1">Passenger and flight links, assigned seats, booking dates, and status.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-4"><h4 class="font-bold text-slate-900">Payments</h4><p class="text-xs text-slate-600 mt-1">Booking charges, payment method, and payment status.</p></div>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Booking and payment automation</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-2xl bg-green-50 p-5"><h4 class="font-bold text-slate-900">Automatic seat allocation</h4><p class="text-sm leading-relaxed text-slate-600 mt-2"><code>AllocateSeat</code> assigns an available seat for a passenger and flight. <code>CheckAvailableSeats</code> lists seats still open on a flight.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Booking validation</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">A double-booking prevention trigger protects seat assignments from being duplicated for a flight.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Payment status</h4><p class="text-sm leading-relaxed text-slate-600 mt-2"><code>UpdatePaymentStatus</code> records payment amount, method, and result for a booking.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900">Failed-payment handling</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">A trigger automatically cancels a booking when its payment fails.</p></div>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Reports and sample queries</h3>
+                <div class="grid sm:grid-cols-3 gap-3 mt-4">
+                    <div class="rounded-2xl border border-slate-200 p-4"><p class="font-bold text-slate-900">Flight operations</p><p class="text-xs text-slate-600 mt-1">Review routes, schedules, aircraft, and flight status.</p></div>
+                    <div class="rounded-2xl border border-slate-200 p-4"><p class="font-bold text-slate-900">Passenger bookings</p><p class="text-xs text-slate-600 mt-1">See passenger, flight, seat, booking date, and status.</p></div>
+                    <div class="rounded-2xl border border-slate-200 p-4"><p class="font-bold text-slate-900">Revenue &amp; occupancy</p><p class="text-xs text-slate-600 mt-1">Summarize successful payments and flight seat usage.</p></div>
+                </div>
+                <div class="mt-5 space-y-3">
+                    <pre class="overflow-x-auto rounded-2xl bg-slate-900 p-4 text-xs leading-relaxed text-slate-100"><code>-- Revenue by flight from successful payments
+SELECT f.flight_number, SUM(pay.amount) AS total_revenue
+FROM Flights f
+JOIN Bookings b ON f.flight_id = b.flight_id
+JOIN Payments pay ON b.booking_id = pay.booking_id
+WHERE pay.payment_status = 'Success'
+GROUP BY f.flight_number;</code></pre>
+                    <pre class="overflow-x-auto rounded-2xl bg-slate-900 p-4 text-xs leading-relaxed text-slate-100"><code>-- Check available seats for a flight
+CALL CheckAvailableSeats(1);</code></pre>
+                </div>
+            </div>
+
+            <div class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Getting started</h3>
+                <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4 text-sm text-slate-600">
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">01</span>Install MySQL Server and open MySQL Workbench.</li>
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">02</span>Run the SQL script to create tables, data, procedures, and triggers.</li>
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">03</span>Use the sample queries to inspect flights, bookings, and revenue.</li>
+                    <li class="rounded-2xl bg-green-50 p-4"><span class="block text-green-800 font-extrabold mb-1">04</span>Try the stored procedures to check seats and allocate a booking.</li>
+                </ol>
+            </div>
+
+            <a class="inline-flex items-center gap-2 mt-8 detail-link" href="https://github.com/Munthalalakshmi-tejaswi/SQL_AirlineReservationSystem" target="_blank" rel="noopener noreferrer">View SQL project on GitHub <i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+        </article>
+    </main>
+    <footer class="border-t border-slate-200 bg-slate-50 py-8 text-center text-xs text-slate-500">
+        <a href="../index.html#projects" class="font-semibold text-green-800 hover:text-green-900">← Return to all projects</a>
+    </footer>
+</body>
+</html>

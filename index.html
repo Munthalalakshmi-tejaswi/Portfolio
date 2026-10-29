@@ -9,12 +9,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
+<<<<<<< HEAD
         .gradient-text { background: linear-gradient(90deg, #6366f1, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-bg { background: radial-gradient(circle at top right, #1e1b4b, #0f172a); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .project-card:hover { transform: translateY(-8px); border-color: #6366f1; background: rgba(30, 41, 59, 0.6); }
-        .skill-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-        .skill-progress { height: 100%; background: linear-gradient(90deg, #6366f1, #22d3ee); border-radius: 10px; }
+        .skill-tag { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; color: #a5b4fc; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
@@ -28,54 +28,573 @@
             <div class="space-x-8 hidden md:flex items-center text-xs font-bold uppercase tracking-widest text-slate-400">
                 <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
                 <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
-                <a href="#coding-stats" class="hover:text-indigo-400 transition">Coding</a>
+                <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
                 <button onclick="toggleModal()" class="bg-indigo-600 px-5 py-2 rounded-full hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20 text-white font-bold">Contact</button>
+=======
+        .gradient-text { background: linear-gradient(90deg, #15803d, #16a34a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-bg { background: radial-gradient(circle at top right, #dcfce7, #f8fafc 48%, #ffffff 80%); }
+        .glass { background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px); border: 1px solid #e2e8f0; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05); }
+        .project-card { height: 100%; display: flex; flex-direction: column; align-items: stretch; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05); }
+        .project-card:hover { transform: translateY(-6px); border-color: #86efac; background: #fff; box-shadow: 0 20px 40px rgba(22, 101, 52, 0.10); }
+        .project-media { width: 100%; height: 168px; flex: 0 0 168px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 1rem; margin-bottom: 1.25rem; background: #f8fafc; }
+        .project-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
+        .project-media img.project-logo { width: auto; height: auto; max-width: 78%; max-height: 112px; }
+        .project-card > .project-badge { align-self: flex-start; }
+        .project-card > .project-cta { align-self: flex-start; margin-top: auto; padding-top: 1.25rem; }
+        .skill-tag { background: #f0fdf4; border: 1px solid #dcfce7; padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; color: #166534; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .project-featured { background: linear-gradient(135deg, #f0fdf4, #fff 72%); }
+
+        :root { color-scheme: light; scroll-padding-top: 5rem; }
+        body { color: #172235; background: #f8fbf9; line-height: 1.6; }
+        .hero-bg { position: relative; isolation: isolate; background: radial-gradient(ellipse at 88% 8%, rgba(187,247,208,.68), transparent 36%), linear-gradient(145deg,#f7fcf8 0%,#fff 52%,#f4fbf6 100%); }
+        .hero-bg::before { content: ""; position: absolute; z-index: -1; width: 25rem; height: 25rem; left: -12rem; bottom: -15rem; border-radius: 50%; background: rgba(187,247,208,.35); filter: blur(70px); pointer-events: none; }
+        nav.glass { background: rgba(255,255,255,.86); border-color: rgba(226,232,240,.8); box-shadow: 0 8px 30px rgba(15,23,42,.045); }
+        nav .max-w-6xl { min-height: 4.5rem; }
+        nav h1 { font-size: 1.45rem; }
+        nav .hidden.md\:flex { gap: 1.3rem; font-size: .68rem; letter-spacing: .12em; }
+        nav a, nav button, a, button { -webkit-tap-highlight-color: transparent; }
+        nav a { position: relative; }
+        nav a:not(:has(i))::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -.35rem; height: 2px; background: #16a34a; transition: right .2s ease; }
+        nav a:not(:has(i)):hover::after { right: 0; }
+        #home { padding-top: 9.5rem; padding-bottom: 5rem; }
+        #home h2 { max-width: 100%; font-size: clamp(1.4rem, 6vw, 4.5rem); letter-spacing: -.06em; text-wrap: balance; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child { padding: clamp(1.35rem,3vw,2.25rem); border: 1px solid #e4eee7; border-radius: 1.75rem; background: rgba(255,255,255,.78); box-shadow: 0 18px 50px rgba(15,23,42,.045); }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child,
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { min-height: 19rem; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child { display: flex; align-items: center; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { display: flex; flex-direction: column; justify-content: center; }
+        #home .grid.grid-cols-1.sm\:grid-cols-3 > * { min-width: 0; white-space: nowrap; font-size: .65rem; letter-spacing: .09em; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child p { font-size: clamp(1rem,1.3vw,1.15rem); }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { padding: 1rem .5rem; }
+        #home .grid.grid-cols-2.md\:grid-cols-4 { gap: .85rem; }
+        #home .grid.grid-cols-2.md\:grid-cols-4 > div { min-height: 6.25rem; display: flex; flex-direction: column; justify-content: center; border-color: #e5eee8; box-shadow: 0 8px 24px rgba(15,23,42,.045); transition: transform .2s ease, box-shadow .2s ease; }
+        #home .grid.grid-cols-2.md\:grid-cols-4 > div:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(22,101,52,.1); }
+        #home .grid.grid-cols-2.md\:grid-cols-4 > div p:last-child { font-size: .62rem; line-height: 1.45; }
+        section:not(#home) { scroll-margin-top: 5rem; }
+        section:not(#home) > div > h3 { font-size: clamp(1rem,1.3vw,1.15rem); letter-spacing: .24em; margin-bottom: 3.25rem; }
+        section:nth-of-type(even) { background-color: #f7faf8; }
+        .glass { border-color: #e5ece8; box-shadow: 0 14px 38px rgba(15,23,42,.045); }
+        article.glass { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+        article.glass:hover { transform: translateY(-4px); border-color: #bbf7d0; box-shadow: 0 20px 42px rgba(22,101,52,.08); }
+        .project-card { border-color: #e6eee8; }
+        .project-media { border-color: #e7eee9; }
+        .skill-tag { transition: color .18s ease, background .18s ease, border-color .18s ease, transform .18s ease; }
+        .skill-tag:hover { color: #14532d; background: #dcfce7; border-color: #86efac; transform: translateY(-1px); }
+        #certifications a { text-decoration: none; }
+        #certifications a span { white-space: nowrap; }
+        button, a[class*="rounded-full"] { transition-duration: .2s; }
+        :focus-visible { outline: 3px solid rgba(22,163,74,.45); outline-offset: 3px; }
+        @media (max-width: 767px) {
+            #home { padding-top: 7.5rem; padding-bottom: 3.5rem; }
+            #home h2 { white-space: normal; }
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child { padding: 1.35rem; }
+            #home .grid.grid-cols-2.md\:grid-cols-4 > div { min-height: 5.75rem; padding: .9rem .45rem; }
+            section:not(#home) { padding-top: 4.25rem; padding-bottom: 4.25rem; }
+            section:not(#home) > div > h3 { margin-bottom: 2.25rem; }
+            #certifications a span { white-space: normal; }
+        }
+        #mobileNav a { border-radius: .8rem; padding: .75rem .85rem; transition: color .18s ease, background .18s ease; }
+        #mobileNav a:hover { color: #166534; background: #f0fdf4; }
+        #projects .project-card { border-radius: 1.65rem; overflow: hidden; }
+        #projects .project-media { background-image: linear-gradient(145deg,#f8fbf9,#f0fdf4); }
+        #projects .project-card h4 { letter-spacing: -.025em; }
+        #skills article, #skills > div > .grid > div { border-radius: 1.5rem; }
+        #achievements article { min-height: 12rem; }
+        #certifications a { border-radius: 1.25rem; }
+        footer { background: linear-gradient(180deg,#fff 0%,#f4fbf6 100%); }
+        footer a { display: inline-flex; width: 2.75rem; height: 2.75rem; align-items: center; justify-content: center; border: 1px solid #e2e8f0; border-radius: 999px; background: #fff; transition: transform .2s ease, color .2s ease, border-color .2s ease; }
+        footer a:hover { transform: translateY(-3px); border-color: #86efac; }
+        @media (max-width: 767px) {
+            nav .max-w-6xl { min-height: 4rem; }
+            #mobileNav .grid { padding-bottom: .25rem; }
+            #projects .project-card { padding: 1.35rem; }
+            #home .grid.grid-cols-2.md\:grid-cols-4 { margin-top: 1.5rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+        }
+
+        /* Final visual polish */
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+        nav .max-w-6xl { max-width: 78rem; }
+        nav h1 { letter-spacing: -.08em; }
+        nav .hidden.md\:flex a { padding: .45rem 0; }
+        #home { min-height: 42rem; display: flex; align-items: center; }
+        #home > div { width: 100%; }
+        #home h2 { margin-bottom: clamp(2.25rem,5vw,4rem); }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] { gap: clamp(1.5rem,4vw,3.5rem); }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { padding: clamp(1.5rem,3vw,2.4rem); border: 1px solid #e4eee7; border-radius: 1.75rem; background: rgba(255,255,255,.82); box-shadow: 0 18px 50px rgba(15,23,42,.045); }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) > div:first-child a { padding: .55rem .8rem; border: 1px solid #e7eee9; border-radius: 999px; background: #fff; text-decoration: none; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) > div:first-child a:hover { color: #166534; border-color: #bbf7d0; background: #f0fdf4; }
+        #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) > div:last-child { gap: .75rem; }
+        #home .grid.grid-cols-2.md\:grid-cols-4 { max-width: 70rem; }
+        section:not(#home) > div > h3 { position: relative; display: table; margin-left: auto; margin-right: auto; padding: 0 0 1rem; font-size: clamp(1.45rem,2.2vw,1.9rem); letter-spacing: -.035em; text-decoration: none; }
+        section:not(#home) > div > h3::after { content: ""; position: absolute; width: 3rem; height: 3px; border-radius: 99px; background: linear-gradient(90deg,#15803d,#4ade80); left: 50%; bottom: 0; transform: translateX(-50%); }
+        section:not(#home) > div > h3 { margin-bottom: clamp(2rem,4vw,3.25rem); }
+        .glass { border-radius: 1.5rem; }
+        #education article, #experience article, #achievements article, #skills .grid > div { background: rgba(255,255,255,.9); }
+        #projects .project-card { padding: clamp(1.25rem,2vw,2rem); border-color: #e6eee8; }
+        #projects .project-featured { border-color: #bbf7d0; }
+        #projects .project-media { border-radius: 1.25rem; }
+        #projects .project-card > p { max-width: 42rem; }
+        #certifications .space-y-4 { display: grid; gap: .85rem; }
+        #certifications .space-y-4 > a { padding: 1.2rem 1.5rem; border-radius: 1.15rem; }
+        #certifications .space-y-4 > a:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(22,101,52,.08); }
+        #certifications .space-y-4 > a > div > p:first-child { line-height: 1.45; }
+        #contactModal .bg-gradient-to-r { background-image: linear-gradient(90deg,#15803d,#4ade80); }
+        @media (max-width: 767px) {
+            #home { min-height: 0; }
+            #home h2 { margin-bottom: 2rem; }
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] { gap: 1rem; }
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:first-child,
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { min-height: 0; }
+            #home .grid.grid-cols-1.sm\:grid-cols-3 > * { font-size: .7rem; }
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) { padding: 1.25rem .75rem; }
+            #home .grid.lg\:grid-cols-\[0\.9fr_1\.1fr\] > div:nth-child(2) > div:first-child a { padding: .45rem .65rem; }
+            #home .grid.grid-cols-2.md\:grid-cols-4 { max-width: 32rem; }
+            section:not(#home) > div > h3 { font-size: 1.45rem; }
+            #certifications .space-y-4 > a { padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-extrabold gradient-text tracking-tighter">MLT.</h1>
+            <div class="hidden md:flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-slate-600">
+                <a href="#education" class="hover:text-green-700 transition">Education</a>
+                <a href="#experience" class="hover:text-green-700 transition">Experience</a>
+                <a href="#projects" class="hover:text-green-700 transition">Projects</a>
+                <a href="#skills" class="hover:text-green-700 transition">Skills</a>
+                <a href="#certifications" class="hover:text-green-700 transition">Certifications</a>
+                <a href="#achievements" class="hover:text-green-700 transition">Achievements</a>
+                <button onclick="toggleModal()" class="bg-green-700 px-5 py-2 rounded-full hover:bg-green-800 transition shadow-lg shadow-green-700/20 text-white font-bold">Contact</button>
+            </div>
+            <button type="button" class="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-green-100 bg-white text-green-800 shadow-sm" id="mobileMenuButton" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation menu" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="mobileNav" class="hidden md:hidden border-t border-slate-100 bg-white/95 px-6 py-4 shadow-lg">
+            <div class="mx-auto grid max-w-6xl grid-cols-2 gap-2 text-sm font-semibold text-slate-700">
+                <a href="#education" onclick="closeMobileMenu()">Education</a>
+                <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+                <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+                <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+                <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+                <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
+                <button onclick="closeMobileMenu(); toggleModal()" class="col-span-2 mt-2 rounded-xl bg-green-700 px-4 py-3 text-center font-bold text-white">Get in touch</button>
+>>>>>>> 021605f (Tej)
             </div>
         </div>
     </nav>
 
+<<<<<<< HEAD
     <section class="hero-bg pt-48 pb-24 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <span class="px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em]">B.Tech Class of 2026</span>
             <h2 class="text-6xl md:text-8xl font-black mt-8 mb-4 uppercase tracking-tighter leading-none">
                 Munthala Lakshmi <br><span class="gradient-text">Tejaswi</span>
             </h2>
-            <div class="flex flex-col items-center gap-4 mb-12">
-                <button onclick="toggleModal()" class="bg-white text-indigo-900 px-10 py-4 rounded-full font-black hover:bg-indigo-50 transition shadow-xl flex items-center gap-3 group tracking-widest text-sm">
-                    <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-                    CONTACT ME
-                </button>
+            
+            <div class="flex flex-col items-center gap-6 mb-12">
+                <div class="flex gap-4">
+                    <button onclick="toggleModal()" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-black hover:bg-indigo-500 transition shadow-xl flex items-center gap-3 group tracking-widest text-xs">
+                        <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                        GET IN TOUCH
+                    </button>
+                    <a href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597" target="_blank" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-full font-black hover:bg-white/20 transition flex items-center gap-3 tracking-widest text-xs">
+                        <i class="fas fa-external-link-alt"></i>
+                        DETAILED INFO (NOTION)
+                    </a>
+                </div>
             </div>
+
             <p class="text-slate-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed font-light">
-                Aspiring <span class="text-white font-medium">Software Engineer</span> specializing in Java Full-stack and AI/ML.
+                Aspiring <span class="text-white font-medium">Software Engineer</span> specializing in Java Full-stack and AI/ML. 9.5 CGPA @ Mohan Babu University.
             </p>
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto bg-slate-900/40 p-8 rounded-[2.5rem] border border-slate-800/50 backdrop-blur-xl">
                 <div><p class="text-3xl font-black text-white">9.52</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CGPA</p></div>
                 <div><p class="text-3xl font-black text-white">400+</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">DSA Solved</p></div>
                 <div><p class="text-3xl font-black text-white">Oracle</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">AI Certified</p></div>
                 <div><p class="text-3xl font-black text-white">Top 2%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Naukri Rank</p></div>
+=======
+    <section id="home" class="hero-bg pt-36 md:pt-40 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-[clamp(1.35rem,6vw,4.5rem)] font-black uppercase tracking-[-0.055em] leading-none whitespace-nowrap mb-10">Munthala Lakshmi <span class="gradient-text">Tejaswi</span></h2>
+            <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8 items-stretch">
+                <div class="order-2 lg:order-1">
+                    <p class="text-slate-600 max-w-xl text-base md:text-lg leading-relaxed">Computer Science graduate with a <span class="text-slate-900 font-semibold">9.5 CGPA</span> and software engineering experience at Codevia Software Private Limited. Experienced in full-stack development, API integration, databases, testing, debugging, and AI-based solutions, with a focus on building practical software.</p></div>
+                <div class="order-1 lg:order-2 text-center">
+                    <div class="flex flex-col items-center gap-3 text-sm text-slate-600 mb-8">
+                        <div class="flex flex-wrap justify-center items-center gap-x-5 gap-y-3">
+                            <a href="tel:+919110721048" class="hover:text-green-700"><i class="fas fa-phone text-green-700 mr-2"></i>+91 91107 21048</a>
+                            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mltejaswi1%40gmail.com&amp;su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer" aria-label="Compose an email to mltejaswi1@gmail.com" title="Email Tejaswi" class="hover:text-green-700"><i class="fas fa-envelope text-green-700 mr-2"></i>mltejaswi1@gmail.com</a>
+                        </div>
+                        <div class="flex flex-wrap justify-center items-center gap-x-5 gap-y-3">
+                            <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" target="_blank" rel="noopener noreferrer" class="hover:text-green-700"><i class="fab fa-linkedin text-green-700 mr-2"></i>LinkedIn</a>
+                            <a href="https://munthala-tejaswi-oqe6wdv.gamma.site/" target="_blank" rel="noopener noreferrer" class="hover:text-green-700"><i class="fas fa-globe text-green-700 mr-2"></i>Portfolio</a>
+                            <a href="https://github.com/Munthalalakshmi-tejaswi" target="_blank" rel="noopener noreferrer" class="hover:text-green-700"><i class="fab fa-github text-green-700 mr-2"></i>GitHub</a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+                        <button onclick="toggleModal()" class="bg-green-700 text-white w-full justify-center px-2 py-3 rounded-xl font-black hover:bg-green-800 transition shadow-xl shadow-green-700/20 flex items-center gap-3 group tracking-widest text-xs"><i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i> GET IN TOUCH</button>
+                        <a href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597" target="_blank" rel="noopener noreferrer" aria-label="View full profile" class="bg-white text-slate-700 border border-slate-200 w-full justify-center px-2 py-3 rounded-xl font-black hover:bg-green-50 hover:border-green-200 transition flex items-center gap-2 tracking-widest text-xs"><i class="fas fa-external-link-alt"></i> VIEW FULL PROFILE</a>
+                        <a href="https://drive.google.com/file/d/19Kn-QQa9vdRAZfFJlxjTBaXeq-3OO-M0/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume on Google Drive" class="bg-white text-slate-700 border border-slate-200 w-full justify-center px-2 py-3 rounded-xl font-black hover:bg-green-50 hover:border-green-200 transition flex items-center gap-3 tracking-widest text-xs"><i class="fas fa-file-alt"></i> VIEW RESUME</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 mt-10 max-w-5xl mx-auto">
+                <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">9.5/10</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CGPA</p></div>
+                <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">400+</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CodeChef Problems</p></div>
+                <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">97.90</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Naukri Percentile</p></div>
+                <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">85%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">NPTEL Java · Elite+Silver</p></div>
+>>>>>>> 021605f (Tej)
+            </div>
+        </div>
+    </section>
+
+<<<<<<< HEAD
+    <section id="skills" class="py-20 px-6 bg-slate-900/20">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center underline decoration-indigo-500 underline-offset-8">Technical Expertise</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-code text-indigo-400"></i> Languages</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Java</span><span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span><span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-layer-group text-cyan-400"></i> Full Stack</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">HTML/CSS</span><span class="skill-tag">TailwindCSS</span>
+                        <span class="skill-tag">Node.js</span><span class="skill-tag">SQL</span><span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-tools text-emerald-400"></i> Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Git</span><span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Power BI</span><span class="skill-tag">VS Code</span>
+                    </div>
+=======
+    <section id="education" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Education</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="glass p-7 md:p-8 rounded-3xl">
+                    <div class="flex flex-wrap justify-between gap-3 items-start">
+                        <div><h4 class="text-lg font-bold text-slate-900">Mohan Babu University</h4><p class="text-sm text-slate-500 mt-1">Tirupati · B.Tech, Computer Science and Engineering</p></div>
+                        <span class="text-xs font-bold text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1">2022–2026</span>
+                    </div>
+                    <p class="mt-5 text-sm text-slate-600"><span class="font-semibold text-slate-900">CGPA</span> · 9.5/10</p>
+                </article>
+                <article class="glass p-7 md:p-8 rounded-3xl">
+                    <div class="flex flex-wrap justify-between gap-3 items-start">
+                        <div><h4 class="text-lg font-bold text-slate-900">Sri Chaitanya Junior College</h4><p class="text-sm text-slate-500 mt-1">Tirupati · Board of Intermediate Education, Andhra Pradesh</p></div>
+                        <span class="text-xs font-bold text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1">2020–2022</span>
+                    </div>
+                    <p class="mt-5 text-sm text-slate-600"><span class="font-semibold text-slate-900">Score</span> · 84%</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Internship Experience</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="glass p-7 md:p-8 rounded-3xl">
+                    <div class="flex flex-wrap justify-between gap-3 items-start">
+                        <div><h4 class="text-lg font-bold text-slate-900">Software Engineering Intern</h4><p class="text-sm text-green-800 font-semibold mt-1">Codevia Software Private Limited</p></div>
+                        <span class="text-xs font-bold text-slate-600 bg-white border border-slate-200 rounded-full px-3 py-1">Jun 2026–Present</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-relaxed text-slate-600">Working on full-stack web application development, API integration, database management, testing, and debugging.</p>
+                </article>
+                <article class="glass p-7 md:p-8 rounded-3xl">
+                    <div class="flex flex-wrap justify-between gap-3 items-start">
+                        <div><h4 class="text-lg font-bold text-slate-900">Web Developer Intern</h4><p class="text-sm text-green-800 font-semibold mt-1">Internshala Trainings</p></div>
+                        <span class="text-xs font-bold text-slate-600 bg-white border border-slate-200 rounded-full px-3 py-1">Jan 2024–Jun 2024</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-relaxed text-slate-600">Built hands-on experience in front-end and back-end development using HTML, CSS, JavaScript, and server-side integration.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Technical Expertise</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-code text-green-700"></i> Programming Languages</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span></div>
+                </div>
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-brain text-green-700"></i> AI &amp; Machine Learning</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">Machine Learning</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Generative AI</span><span class="skill-tag">LLMs</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">RAG</span><span class="skill-tag">AI Agents</span><span class="skill-tag">Fine-Tuning</span></div>
+                </div>
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-layer-group text-green-700"></i> Frameworks &amp; Libraries</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">React.js</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">Hugging Face Transformers</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span></div>
+                </div>
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-database text-green-700"></i> Databases</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">MongoDB</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">SQL</span></div>
+                </div>
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-screwdriver-wrench text-green-700"></i> Tools &amp; Platforms</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">Git</span><span class="skill-tag">Docker</span><span class="skill-tag">VS Code</span><span class="skill-tag">Power BI</span><span class="skill-tag">n8n (Workflow Automation)</span></div>
+                </div>
+                <div class="glass p-7 rounded-3xl">
+                    <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-lightbulb text-green-700"></i> Core Competencies</h4>
+                    <div class="flex flex-wrap gap-2"><span class="skill-tag">Data Structures &amp; Algorithms</span><span class="skill-tag">Problem Solving</span><span class="skill-tag">Object-Oriented Programming</span><span class="skill-tag">Testing &amp; Debugging</span><span class="skill-tag">API Integration</span></div>
+>>>>>>> 021605f (Tej)
+                </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<<<<<<< HEAD
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Featured Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <h4 class="text-xl font-bold mb-4 uppercase">Jarvis AI Assistant</h4>
-                    <p class="text-slate-400 text-sm mb-8">Voice/Chat AI with automation.</p>
+                    <p class="text-slate-400 text-sm mb-8">AI voice-controlled assistant with real-time task automation.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/Jarvis" target="_blank" class="text-xs font-black border-b-2 border-indigo-500 pb-1">VIEW REPO</a>
                 </div>
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
-                    <h4 class="text-xl font-bold mb-4 uppercase">Cinevault App</h4>
-                    <p class="text-slate-400 text-sm mb-8">Java/Android Movie Platform.</p>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Cinevault (Netflix)</h4>
+                    <p class="text-slate-400 text-sm mb-8">Full-stack movie streaming app with authentication and categorized content.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank" class="text-xs font-black border-b-2 border-cyan-500 pb-1">VIEW REPO</a>
                 </div>
                 <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
                     <h4 class="text-xl font-bold mb-4 uppercase">Farmers E-Market</h4>
-                    <p class="text-slate-400 text-sm mb-8">Direct-to-consumer Java platform.</p>
+                    <p class="text-slate-400 text-sm mb-8">Direct-to-consumer platform for farmers with secure payment integration.</p>
                     <a href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank" class="text-xs font-black border-b-2 border-emerald-500 pb-1">VIEW REPO</a>
                 </div>
+=======
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Featured Projects</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="projects/sv-eats.html" class="project-card project-featured glass p-6 md:p-8 rounded-[2rem] transition-all border border-green-200 md:col-span-2 block text-left">
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <img src="assets/sv-eats-icon.png" alt="SV Eats app icon" class="w-24 h-24 sm:w-28 sm:h-28 rounded-[1.4rem] border border-slate-200 object-cover shadow-sm shrink-0">
+                        <div class="min-w-0 flex-1">
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="text-[10px] font-black uppercase tracking-[0.16em] text-green-800 bg-green-100 px-3 py-1.5 rounded-full">Live on Google Play</span>
+                                <span class="text-xs font-semibold text-slate-500"><i class="fas fa-star text-amber-500 mr-1"></i>4.5 <span class="mx-1">·</span> 73 reviews</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-slate-900">SV Eats</h4>
+                            <p class="text-sm mt-1 mb-4 text-green-700 font-semibold">Cyberdetox <span class="text-slate-400 font-normal">·</span> 5K+ downloads</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">A food delivery app connecting customers, restaurants, and delivery agents. The live product includes restaurant management and order tracking.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-green-100">
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4"><span class="font-semibold text-slate-900">My role:</span> Contributed to this group project across the frontend (HTML, CSS, and JavaScript) and backend development with Node.js.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-[11px] font-semibold text-green-800 bg-green-50 border border-green-100 px-3 py-1 rounded-full">Frontend development</span>
+                            <span class="text-[11px] font-semibold text-green-800 bg-green-50 border border-green-100 px-3 py-1 rounded-full">Node.js backend</span>
+                            <span class="text-[11px] font-semibold text-slate-600 bg-slate-50 border border-slate-200 px-3 py-1 rounded-full">Group project</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="projects/crop-pest-detection.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-slate-950"><img src="assets/crop-pest-detection.png" alt="Pest Detection System app welcome screen" loading="lazy"></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Crop Pest Detection</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Deep learning research project using DeepestNet with EfficientNet-B4, achieving 95.4% accuracy.</p>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/insights-iva.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-white"><img class="project-logo" src="assets/insights-iva-logo.png" alt="Insights Iva logo" loading="lazy"></div>
+                    <span class="project-badge inline-flex text-[10px] font-bold uppercase tracking-wider text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1 mb-4">Company project · Internship</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Insights Iva</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">A manufacturing ERP and business intelligence platform for production, inventory, procurement, sales, and reporting.</p>
+                    <div class="w-full mt-5 rounded-2xl border border-green-100 bg-green-50/70 p-4">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-green-800 mb-2">My contribution</p>
+                        <p class="text-sm leading-relaxed text-slate-700">Web development and API integration during my internship at Codevia Software Private Limited.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="text-[10px] font-semibold text-green-800 bg-white border border-green-100 rounded-full px-2.5 py-1">Web development</span>
+                            <span class="text-[10px] font-semibold text-green-800 bg-white border border-green-100 rounded-full px-2.5 py-1">API integration</span>
+                        </div>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/jarvis.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-black border-slate-800"><img src="assets/jarvis-assistant.gif" alt="Animated digital assistant visualization" loading="lazy"></div>
+                    <span class="project-badge inline-flex text-[10px] font-bold uppercase tracking-wider text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1 mb-4">Voice + AI chat</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Jarvis AI Assistant</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Voice and chat assistant for web controls, information, calculations, reminders, and everyday tasks.</p>
+                    <div class="w-full rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-slate-500 mb-3">What it can do</p>
+                        <div class="grid grid-cols-2 gap-x-3 gap-y-3">
+                            <div><p class="text-[11px] font-bold text-slate-800"><i class="fas fa-microphone text-green-700 mr-1"></i>Voice and chat</p><p class="text-[10px] leading-relaxed text-slate-600 mt-1">Speech, text, and spoken replies.</p></div>
+                            <div><p class="text-[11px] font-bold text-slate-800"><i class="fas fa-globe text-green-700 mr-1"></i>Website controls</p><p class="text-[10px] leading-relaxed text-slate-600 mt-1">Open popular sites by voice.</p></div>
+                            <div><p class="text-[11px] font-bold text-slate-800"><i class="fas fa-wand-magic-sparkles text-green-700 mr-1"></i>Everyday utilities</p><p class="text-[10px] leading-relaxed text-slate-600 mt-1">Time, date, math, battery, and search.</p></div>
+                            <div><p class="text-[11px] font-bold text-slate-800"><i class="fas fa-list-check text-green-700 mr-1"></i>Helpful extras</p><p class="text-[10px] leading-relaxed text-slate-600 mt-1">Country facts, tasks, and jokes.</p></div>
+                        </div>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/cinevault.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-slate-950 border-slate-800"><img src="assets/cinevault-logo.jpg" alt="CineVault movie app logo" loading="lazy"></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Cinevault</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Android movie trailer app with a curated five-title catalog, movie details, and built-in playback controls.</p>
+                    <div class="w-full mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-slate-500 mb-3">App experience</p>
+                        <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-[11px] font-semibold text-slate-700">
+                            <span><i class="fas fa-sparkles text-green-700 mr-1.5"></i>Splash screen</span>
+                            <span><i class="fas fa-compass text-green-700 mr-1.5"></i>Browse &amp; search</span>
+                            <span><i class="fas fa-film text-green-700 mr-1.5"></i>5 movie catalog</span>
+                            <span><i class="fas fa-circle-play text-green-700 mr-1.5"></i>Trailer controls</span>
+                        </div>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/farmers-market.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media"><img src="assets/farmers-market-preview.png" alt="Farmers E-Market homepage preview" loading="lazy"></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Farmers E-Market</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">A user-friendly online marketplace where farmers can showcase and sell goods directly to customers.</p>
+                    <div class="w-full mt-5 rounded-2xl border border-green-100 bg-green-50/70 p-4">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-green-800 mb-2">Project focus</p>
+                        <p class="text-sm leading-relaxed text-slate-700">Wider market access and stronger farmer-to-consumer connections.</p>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/n8n-workflows.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-slate-950"><img src="assets/n8n-gmail-workflow.jpg" alt="n8n form and Gmail automation workflow" loading="lazy"></div>
+                    <span class="project-badge inline-flex text-[10px] font-bold uppercase tracking-wider text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1 mb-4">Workflow automation</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">n8n Workflows</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Automations for Gmail, form submissions, and lead management, with conditional routing using IF nodes.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">n8n</span>
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">Gmail API</span>
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">Webhooks</span>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+                <a href="projects/airline-reservation.html" class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
+                    <div class="project-media bg-white"><img src="assets/airline-reservation-preview.png" alt="MySQL Workbench view of the airline reservation database tables" loading="lazy"></div>
+                    <span class="project-badge inline-flex text-[10px] font-bold uppercase tracking-wider text-green-800 bg-green-50 border border-green-100 rounded-full px-3 py-1 mb-4">SQL · MySQL</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Airline Reservation System</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Relational database project for flights, passengers, seats, bookings, payments, and operational reports.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">Stored procedures</span>
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">Triggers</span>
+                        <span class="text-[10px] font-semibold text-green-800 bg-green-50 border border-green-100 rounded-full px-2.5 py-1">Reports</span>
+                    </div>
+                    <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
+                </a>
+>>>>>>> 021605f (Tej)
+            </div>
+        </div>
+    </section>
+
+<<<<<<< HEAD
+    <section id="certifications" class="py-20 px-6 bg-slate-900/10">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Credentials</h3>
+            <div class="space-y-4">
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Oracle Cloud AI Foundations Associate</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Oracle • Sep 2025</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Java Full Stack (TalentNext)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Wipro • Oct 2025</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
+                    <div>
+                        <p class="text-white font-bold">Programming in Java (Elite+Silver)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">NPTEL Swayam • Apr 2024</p>
+                    </div>
+                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+=======
+    <section id="certifications" class="py-20 px-6 bg-slate-100/70">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Certifications</h3>
+            <div class="space-y-4">
+                <a href="assets/wipro-talentnext-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Wipro TalentNext certificate PDF in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Java Full Stack — Course Completion Certificate (Wipro TalentNext)</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Wipro • Oct 2025</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/pearson-mepro-level-10-certificate.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Pearson MePro Level 10 Expert certificate in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Pearson MePro English — Levels 1–10 (Level 10 Expert)</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Pearson MePro • Nov 2023–Jan 2024</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/web-development-internshala-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Internshala Web Development training certificate PDF in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Web Development — 8-Week Online Training</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Internshala Trainings • Jun 2024 • 100% final assessment</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/hackerrank-sql-intermediate-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open HackerRank SQL Intermediate certificate PDF in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">SQL (Intermediate) Certificate</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">HackerRank • Aug 2024</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/naresh-it-python-course-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Naresh IT Technologies Python course certificate PDF in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Python Programming Course</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Naresh IT Technologies • Jun–Aug 2024</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/nptel-java-certificate.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open NPTEL Programming in Java certificate in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Programming in Java — Elite+Silver (85%)</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">NPTEL Swayam • Apr 2025</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/infosys-java-dsa-certificate.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Infosys Springboard certificate in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Data Structures and Algorithms using Java</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Infosys Springboard • Sep 2025</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/oracle-ai-foundations-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Oracle AI Foundations certificate PDF in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Oracle • Sep 2025</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/cisco-cybersecurity-certificate.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Cisco Introduction to Cybersecurity certificate in a new tab" class="glass p-6 rounded-2xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group transition hover:border-green-200 hover:bg-green-50/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
+                    <div><p class="text-slate-900 font-bold">Introduction to Cybersecurity</p><p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Cisco Networking Academy • Jan 2025</p></div>
+                    <span class="inline-flex items-center gap-2 text-xs font-black tracking-wide text-green-800">VIEW CERTIFICATE <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Achievements</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <article class="glass p-6 rounded-3xl">
+                    <i class="fas fa-code text-green-700 text-lg"></i>
+                    <h4 class="font-bold text-slate-900 mt-4">CodeChef</h4>
+                    <p class="text-sm text-slate-600 mt-2">400+ problems solved · Maximum rating 800+</p>
+                </article>
+                <article class="glass p-6 rounded-3xl">
+                    <i class="fas fa-database text-green-700 text-lg"></i>
+                    <h4 class="font-bold text-slate-900 mt-4">HackerRank</h4>
+                    <p class="text-sm text-slate-600 mt-2">SQL (Intermediate) certificate</p>
+                </article>
+                <article class="glass p-6 rounded-3xl">
+                    <i class="fas fa-award text-green-700 text-lg"></i>
+                    <h4 class="font-bold text-slate-900 mt-4">Naukri Campus Young Turks 2025</h4>
+                    <p class="text-sm text-slate-600 mt-2">Certificate of Merit · 97.90 percentile</p>
+                </article>
+                <article class="glass p-6 rounded-3xl">
+                    <i class="fas fa-laptop-code text-green-700 text-lg"></i>
+                    <h4 class="font-bold text-slate-900 mt-4">Coding Platforms</h4>
+                    <p class="text-sm text-slate-600 mt-2">LeetCode · HackerRank · CodeChef</p>
+                </article>
+>>>>>>> 021605f (Tej)
             </div>
         </div>
     </section>
@@ -83,7 +602,11 @@
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-lg">
         <div class="bg-white w-full max-w-2xl rounded-[2rem] overflow-hidden relative shadow-2xl animate-in fade-in zoom-in duration-300">
             <button onclick="toggleModal()" class="absolute top-4 right-6 text-slate-500 hover:text-black text-4xl font-light z-50">&times;</button>
+<<<<<<< HEAD
             <div class="h-2 bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
+=======
+            <div class="h-2 bg-gradient-to-r from-green-600 to-emerald-400"></div>
+>>>>>>> 021605f (Tej)
             <div class="w-full bg-white flex justify-center">
                 <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSd6fM91qnjQ6HF_kVJDUwyr4kXvoZrRl33-TEn9OvgGRTGmhg/viewform?embedded=true" 
@@ -99,11 +622,48 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <footer class="py-16 text-center border-t border-slate-900 bg-[#070c18]">
+        <div class="flex justify-center gap-6 mb-8 text-slate-400">
+            <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Munthalalakshmi-tejaswi" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+            <a href="mailto:mltejaswi1@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+        </div>
         <p class="text-[10px] text-slate-700 uppercase tracking-[0.4em]">© 2026 MUNTHALA LAKSHMI TEJASWI</p>
     </footer>
 
     <script>
+=======
+    <footer class="py-16 text-center border-t border-slate-200 bg-white">
+        <div class="flex justify-center gap-6 mb-8 text-slate-500">
+            <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" class="hover:text-green-700 transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Munthalalakshmi-tejaswi" class="hover:text-green-700 transition"><i class="fab fa-github"></i></a>
+            <a href="tel:+919110721048" class="hover:text-green-700 transition"><i class="fas fa-phone"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mltejaswi1%40gmail.com&amp;su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer" aria-label="Compose an email to mltejaswi1@gmail.com" title="Email Tejaswi" class="hover:text-green-700 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-[10px] text-slate-500 uppercase tracking-[0.35em]">© 2026 MUNTHALA LAKSHMI TEJASWI</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileNav');
+            const button = document.getElementById('mobileMenuButton');
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden', isOpen);
+            button.setAttribute('aria-expanded', String(!isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+            button.innerHTML = isOpen ? '<i class="fas fa-bars" aria-hidden="true"></i>' : '<i class="fas fa-xmark" aria-hidden="true"></i>';
+        }
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileNav');
+            const button = document.getElementById('mobileMenuButton');
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', 'Open navigation menu');
+            button.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+        }
+
+>>>>>>> 021605f (Tej)
         function toggleModal() {
             const modal = document.getElementById('contactModal');
             if (modal.classList.contains('hidden')) {
@@ -116,7 +676,6 @@
                 document.body.style.overflow = 'auto';
             }
         }
-        // Close on outside click
         window.onclick = function(event) {
             const modal = document.getElementById('contactModal');
             if (event.target == modal) toggleModal();

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Farmers E-Market: a web technology project for farmers to showcase and sell goods directly to consumers.">
+    <title>Farmers E-Market | Munthala Lakshmi Tejaswi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .detail-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 14px 40px rgba(15, 23, 42, .05); }
+        .detail-link { color: #166534; font-weight: 700; }
+        .detail-link:hover { color: #14532d; }
+        .detail-tag { color: #166534; background: #f0fdf4; border: 1px solid #dcfce7; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+    <header class="border-b border-slate-200 bg-white/95">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html#projects" class="font-extrabold tracking-tight text-green-800">MLT<span class="text-slate-400">.</span></a>
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-green-800"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-14 md:py-20">
+        <div class="mb-10">
+            <p class="text-xs font-extrabold tracking-[0.28em] uppercase text-green-700 mb-4">Project details</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Farmers E-Market</h1>
+        </div>
+        <article id="farmers-market" class="detail-card scroll-mt-8 rounded-3xl p-7 md:p-10">
+            <p class="text-xs font-extrabold tracking-[0.2em] uppercase text-green-700">Web technology mini-project · E-commerce</p>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Website for Farmers Selling Goods</h2>
+            <img src="../assets/farmers-market-preview.png" alt="Farmers E-Market homepage with farmers, produce, and product navigation" class="mt-6 w-full max-w-3xl h-auto rounded-2xl border border-slate-200 shadow-sm">
+            <p class="mt-5 leading-relaxed text-slate-600">Designed and developed a user-friendly online platform where farmers can showcase their goods and sell directly to customers. The project addresses the challenge of reaching wider markets and aims to strengthen farmer-to-consumer connections and improve market accessibility.</p>
+
+            <div class="grid sm:grid-cols-3 gap-4 mt-7">
+                <div class="rounded-2xl bg-green-50 p-5"><i class="fas fa-store text-green-700"></i><h3 class="font-bold text-slate-900 mt-3">Product showcase</h3><p class="text-sm text-slate-600 mt-1">A digital storefront for farmers to present their goods.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><i class="fas fa-handshake text-green-700"></i><h3 class="font-bold text-slate-900 mt-3">Direct connection</h3><p class="text-sm text-slate-600 mt-1">Connect producers with customers through a direct online channel.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><i class="fas fa-chart-line text-green-700"></i><h3 class="font-bold text-slate-900 mt-3">Market access</h3><p class="text-sm text-slate-600 mt-1">Help farmers reach a wider customer base and pursue fairer market opportunities.</p></div>
+            </div>
+
+            <div class="mt-8 border-t border-slate-100 pt-6">
+                <h3 class="font-bold text-slate-900">Technologies listed in the project abstract</h3>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">HTML</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">CSS</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">JavaScript</span>
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">PHP</span>
+                </div>
+                <p class="text-sm text-slate-600 mt-3">The project also covers web user experience, database management, and security considerations.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-x-6 gap-y-3 mt-7 border-t border-slate-100 pt-6">
+                <a class="detail-link inline-flex items-center gap-2" href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank" rel="noopener noreferrer">View project on GitHub <i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+                <a class="detail-link inline-flex items-center gap-2" href="https://drive.google.com/file/d/1FYmxrw8YENSnHJR0icW26kFEqsbsJghd/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read the project abstract <i class="fas fa-file-pdf text-xs"></i></a>
+            </div>
+        </article>
+    </main>
+    <footer class="border-t border-slate-200 bg-slate-50 py-8 text-center text-xs text-slate-500">
+        <a href="../index.html#projects" class="font-semibold text-green-800 hover:text-green-900">← Return to all projects</a>
+    </footer>
+</body>
+</html>
