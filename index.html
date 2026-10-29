@@ -9,28 +9,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
-<<<<<<< HEAD
-        .gradient-text { background: linear-gradient(90deg, #6366f1, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-bg { background: radial-gradient(circle at top right, #1e1b4b, #0f172a); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .project-card:hover { transform: translateY(-8px); border-color: #6366f1; background: rgba(30, 41, 59, 0.6); }
-        .skill-tag { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; color: #a5b4fc; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-    </style>
-</head>
-<body class="bg-[#0f172a] text-slate-100 selection:bg-indigo-500/30">
-
-    <nav class="fixed w-full z-50 glass border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-extrabold gradient-text tracking-tighter">MLT.</h1>
-            <div class="space-x-8 hidden md:flex items-center text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
-                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
-                <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
-                <button onclick="toggleModal()" class="bg-indigo-600 px-5 py-2 rounded-full hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20 text-white font-bold">Contact</button>
-=======
         .gradient-text { background: linear-gradient(90deg, #15803d, #16a34a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-bg { background: radial-gradient(circle at top right, #dcfce7, #f8fafc 48%, #ffffff 80%); }
         .glass { background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px); border: 1px solid #e2e8f0; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05); }
@@ -188,42 +166,10 @@
                 <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
                 <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
                 <button onclick="closeMobileMenu(); toggleModal()" class="col-span-2 mt-2 rounded-xl bg-green-700 px-4 py-3 text-center font-bold text-white">Get in touch</button>
->>>>>>> 021605f (Tej)
             </div>
         </div>
     </nav>
 
-<<<<<<< HEAD
-    <section class="hero-bg pt-48 pb-24 px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <span class="px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em]">B.Tech Class of 2026</span>
-            <h2 class="text-6xl md:text-8xl font-black mt-8 mb-4 uppercase tracking-tighter leading-none">
-                Munthala Lakshmi <br><span class="gradient-text">Tejaswi</span>
-            </h2>
-            
-            <div class="flex flex-col items-center gap-6 mb-12">
-                <div class="flex gap-4">
-                    <button onclick="toggleModal()" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-black hover:bg-indigo-500 transition shadow-xl flex items-center gap-3 group tracking-widest text-xs">
-                        <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-                        GET IN TOUCH
-                    </button>
-                    <a href="https://immediate-snout-928.notion.site/Munthala-Lakshmi-Tejaswi-1a2556f74172803e8cdac3488d05f597" target="_blank" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-full font-black hover:bg-white/20 transition flex items-center gap-3 tracking-widest text-xs">
-                        <i class="fas fa-external-link-alt"></i>
-                        DETAILED INFO (NOTION)
-                    </a>
-                </div>
-            </div>
-
-            <p class="text-slate-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed font-light">
-                Aspiring <span class="text-white font-medium">Software Engineer</span> specializing in Java Full-stack and AI/ML. 9.5 CGPA @ Mohan Babu University.
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto bg-slate-900/40 p-8 rounded-[2.5rem] border border-slate-800/50 backdrop-blur-xl">
-                <div><p class="text-3xl font-black text-white">9.52</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CGPA</p></div>
-                <div><p class="text-3xl font-black text-white">400+</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">DSA Solved</p></div>
-                <div><p class="text-3xl font-black text-white">Oracle</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">AI Certified</p></div>
-                <div><p class="text-3xl font-black text-white">Top 2%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Naukri Rank</p></div>
-=======
     <section id="home" class="hero-bg pt-36 md:pt-40 pb-20 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-center text-[clamp(1.35rem,6vw,4.5rem)] font-black uppercase tracking-[-0.055em] leading-none whitespace-nowrap mb-10">Munthala Lakshmi <span class="gradient-text">Tejaswi</span></h2>
@@ -254,37 +200,10 @@
                 <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">400+</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">CodeChef Problems</p></div>
                 <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">97.90</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Naukri Percentile</p></div>
                 <div class="bg-white/90 p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-2xl md:text-3xl font-black text-slate-900">85%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">NPTEL Java · Elite+Silver</p></div>
->>>>>>> 021605f (Tej)
             </div>
         </div>
     </section>
 
-<<<<<<< HEAD
-    <section id="skills" class="py-20 px-6 bg-slate-900/20">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center underline decoration-indigo-500 underline-offset-8">Technical Expertise</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl">
-                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-code text-indigo-400"></i> Languages</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">Java</span><span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span><span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-                <div class="glass p-8 rounded-3xl">
-                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-layer-group text-cyan-400"></i> Full Stack</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">HTML/CSS</span><span class="skill-tag">TailwindCSS</span>
-                        <span class="skill-tag">Node.js</span><span class="skill-tag">SQL</span><span class="skill-tag">MongoDB</span>
-                    </div>
-                </div>
-                <div class="glass p-8 rounded-3xl">
-                    <h4 class="text-white font-bold mb-6 flex items-center gap-3"><i class="fas fa-tools text-emerald-400"></i> Tools</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">Git</span><span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Power BI</span><span class="skill-tag">VS Code</span>
-                    </div>
-=======
     <section id="education" class="py-20 px-6">
         <div class="max-w-6xl mx-auto">
             <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Education</h3>
@@ -356,7 +275,6 @@
                 <div class="glass p-7 rounded-3xl">
                     <h4 class="text-slate-900 font-bold mb-5 flex items-center gap-3"><i class="fas fa-lightbulb text-green-700"></i> Core Competencies</h4>
                     <div class="flex flex-wrap gap-2"><span class="skill-tag">Data Structures &amp; Algorithms</span><span class="skill-tag">Problem Solving</span><span class="skill-tag">Object-Oriented Programming</span><span class="skill-tag">Testing &amp; Debugging</span><span class="skill-tag">API Integration</span></div>
->>>>>>> 021605f (Tej)
                 </div>
             </div>
         </div>
@@ -364,25 +282,6 @@
 
     <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-<<<<<<< HEAD
-            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Featured Projects</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
-                    <h4 class="text-xl font-bold mb-4 uppercase">Jarvis AI Assistant</h4>
-                    <p class="text-slate-400 text-sm mb-8">AI voice-controlled assistant with real-time task automation.</p>
-                    <a href="https://github.com/Munthalalakshmi-tejaswi/Jarvis" target="_blank" class="text-xs font-black border-b-2 border-indigo-500 pb-1">VIEW REPO</a>
-                </div>
-                <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
-                    <h4 class="text-xl font-bold mb-4 uppercase">Cinevault (Netflix)</h4>
-                    <p class="text-slate-400 text-sm mb-8">Full-stack movie streaming app with authentication and categorized content.</p>
-                    <a href="https://github.com/Munthalalakshmi-tejaswi/Cinevault-mininetflix" target="_blank" class="text-xs font-black border-b-2 border-cyan-500 pb-1">VIEW REPO</a>
-                </div>
-                <div class="project-card glass p-8 rounded-[2rem] transition-all border border-transparent">
-                    <h4 class="text-xl font-bold mb-4 uppercase">Farmers E-Market</h4>
-                    <p class="text-slate-400 text-sm mb-8">Direct-to-consumer platform for farmers with secure payment integration.</p>
-                    <a href="https://github.com/Munthalalakshmi-tejaswi/WT-Farmerssellinggoods" target="_blank" class="text-xs font-black border-b-2 border-emerald-500 pb-1">VIEW REPO</a>
-                </div>
-=======
             <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Featured Projects</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a href="projects/sv-eats.html" class="project-card project-featured glass p-6 md:p-8 rounded-[2rem] transition-all border border-green-200 md:col-span-2 block text-left">
@@ -494,38 +393,10 @@
                     </div>
                     <span class="project-cta text-xs font-black border-b-2 border-green-600 pb-1 text-green-800">VIEW PROJECT DETAILS <i class="fas fa-arrow-right ml-1"></i></span>
                 </a>
->>>>>>> 021605f (Tej)
             </div>
         </div>
     </section>
 
-<<<<<<< HEAD
-    <section id="certifications" class="py-20 px-6 bg-slate-900/10">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xs font-black tracking-[0.5em] text-indigo-500 mb-12 uppercase text-center">Credentials</h3>
-            <div class="space-y-4">
-                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
-                    <div>
-                        <p class="text-white font-bold">Oracle Cloud AI Foundations Associate</p>
-                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Oracle • Sep 2025</p>
-                    </div>
-                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
-                    <div>
-                        <p class="text-white font-bold">Java Full Stack (TalentNext)</p>
-                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Wipro • Oct 2025</p>
-                    </div>
-                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="glass p-6 rounded-2xl flex justify-between items-center group hover:bg-white/5 transition">
-                    <div>
-                        <p class="text-white font-bold">Programming in Java (Elite+Silver)</p>
-                        <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">NPTEL Swayam • Apr 2024</p>
-                    </div>
-                    <i class="fas fa-certificate text-indigo-500 opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-=======
     <section id="certifications" class="py-20 px-6 bg-slate-100/70">
         <div class="max-w-4xl mx-auto">
             <h3 class="text-sm md:text-base font-black tracking-[0.22em] text-green-800 mb-12 uppercase text-center underline decoration-green-500 decoration-2 underline-offset-8">Certifications</h3>
@@ -594,7 +465,6 @@
                     <h4 class="font-bold text-slate-900 mt-4">Coding Platforms</h4>
                     <p class="text-sm text-slate-600 mt-2">LeetCode · HackerRank · CodeChef</p>
                 </article>
->>>>>>> 021605f (Tej)
             </div>
         </div>
     </section>
@@ -602,11 +472,7 @@
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-lg">
         <div class="bg-white w-full max-w-2xl rounded-[2rem] overflow-hidden relative shadow-2xl animate-in fade-in zoom-in duration-300">
             <button onclick="toggleModal()" class="absolute top-4 right-6 text-slate-500 hover:text-black text-4xl font-light z-50">&times;</button>
-<<<<<<< HEAD
-            <div class="h-2 bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
-=======
             <div class="h-2 bg-gradient-to-r from-green-600 to-emerald-400"></div>
->>>>>>> 021605f (Tej)
             <div class="w-full bg-white flex justify-center">
                 <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSd6fM91qnjQ6HF_kVJDUwyr4kXvoZrRl33-TEn9OvgGRTGmhg/viewform?embedded=true" 
@@ -622,18 +488,6 @@
         </div>
     </div>
 
-<<<<<<< HEAD
-    <footer class="py-16 text-center border-t border-slate-900 bg-[#070c18]">
-        <div class="flex justify-center gap-6 mb-8 text-slate-400">
-            <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/Munthalalakshmi-tejaswi" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="mailto:mltejaswi1@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-[10px] text-slate-700 uppercase tracking-[0.4em]">© 2026 MUNTHALA LAKSHMI TEJASWI</p>
-    </footer>
-
-    <script>
-=======
     <footer class="py-16 text-center border-t border-slate-200 bg-white">
         <div class="flex justify-center gap-6 mb-8 text-slate-500">
             <a href="https://www.linkedin.com/in/munthala-lakshmi-tejaswi/" class="hover:text-green-700 transition"><i class="fab fa-linkedin-in"></i></a>
@@ -663,7 +517,6 @@
             button.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
         }
 
->>>>>>> 021605f (Tej)
         function toggleModal() {
             const modal = document.getElementById('contactModal');
             if (modal.classList.contains('hidden')) {
