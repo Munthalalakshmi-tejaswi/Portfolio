@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DocAI is a full-stack PDF question answering platform with document-grounded AI responses, built by Munthala Lakshmi Tejaswi.">
+    <title>DocAI | Munthala Lakshmi Tejaswi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .detail-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 14px 40px rgba(15, 23, 42, .05); }
+        .detail-link { color: #166534; font-weight: 700; }
+        .detail-link:hover { color: #14532d; }
+        .detail-tag { color: #166534; background: #f0fdf4; border: 1px solid #dcfce7; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 selection:bg-green-200">
+    <header class="border-b border-slate-200 bg-white/95">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html#projects" class="font-extrabold tracking-tight text-green-800">MLT<span class="text-slate-400">.</span></a>
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-green-800"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+        <div class="mb-10">
+            <p class="text-xs font-extrabold tracking-[0.28em] uppercase text-green-700 mb-4">Project details</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">DocAI</h1>
+            <p class="text-lg text-slate-600 mt-3">AI-powered PDF question answering platform</p>
+        </div>
+        <article class="detail-card rounded-3xl p-6 md:p-10">
+            <img src="../assets/docai-preview.png" alt="DocAI interface with PDF viewer and AI question-answering chat" class="w-full rounded-2xl border border-slate-200 shadow-sm object-cover">
+            <div class="mt-8">
+                <span class="detail-tag inline-flex rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Full-stack · Retrieval-augmented generation</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-4">Ask questions and get answers grounded in your PDFs</h2>
+                <p class="mt-4 leading-relaxed text-slate-600">DocAI is a document-focused AI assistant with a responsive three-pane workspace. Users can upload a PDF, read it in the built-in viewer, and ask questions in chat. Answers are grounded in extracted document passages and can point back to the relevant source pages.</p>
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">React 18</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Vite</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">FastAPI</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Python</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">FAISS</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Sentence Transformers</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Groq</span><span class="detail-tag rounded-full px-3 py-1 text-xs font-semibold">Ollama</span>
+                </div>
+            </div>
+            <section class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Core experience</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-2xl bg-green-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-file-pdf text-green-700 mr-2"></i>PDF workspace</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">View a document beside the conversation, navigate pages, and adjust the zoom while reviewing its contents.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-comments text-green-700 mr-2"></i>Grounded Q&amp;A</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Ask questions in chat and receive responses based on the uploaded document, with page references for context.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-database text-green-700 mr-2"></i>Semantic retrieval</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Extract and chunk PDF text, create sentence embeddings, and use FAISS similarity search to retrieve relevant passages.</p></div>
+                    <div class="rounded-2xl bg-green-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-hard-drive text-green-700 mr-2"></i>Persistent sessions</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Keep uploaded document data and chat session details in browser IndexedDB so the workspace can survive refreshes.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-microphone text-green-700 mr-2"></i>Voice input</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Use browser speech recognition to ask questions by voice, with language selection for the chat experience.</p></div>
+                    <div class="rounded-2xl bg-slate-50 p-5"><h4 class="font-bold text-slate-900"><i class="fas fa-cloud text-green-700 mr-2"></i>Flexible inference</h4><p class="text-sm leading-relaxed text-slate-600 mt-2">Support hosted Groq inference and local Ollama models for different deployment and privacy needs.</p></div>
+                </div>
+            </section>
+            <section class="mt-9 border-t border-slate-100 pt-7">
+                <h3 class="text-lg font-bold text-slate-900">Architecture</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-2xl border border-slate-200 p-5"><p class="font-bold text-slate-900">Frontend</p><p class="text-sm leading-relaxed text-slate-600 mt-2">React 18 and Vite power the responsive interface, PDF viewer, chat, voice input, and IndexedDB persistence.</p></div>
+                    <div class="rounded-2xl border border-slate-200 p-5"><p class="font-bold text-slate-900">Backend and retrieval</p><p class="text-sm leading-relaxed text-slate-600 mt-2">FastAPI handles document and chat endpoints. PyPDF extracts text, Sentence Transformers creates embeddings, and FAISS retrieves relevant context for the language model.</p></div>
+                </div>
+            </section>
+            <div class="flex flex-wrap gap-5 mt-8">
+                <a class="detail-link inline-flex items-center gap-2" href="https://doc-ai-uva5.vercel.app/" target="_blank" rel="noopener noreferrer">Open live DocAI app <i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+                <a class="detail-link inline-flex items-center gap-2" href="https://github.com/Munthalalakshmi-tejaswi/DocAI" target="_blank" rel="noopener noreferrer">View source on GitHub <i class="fab fa-github text-xs"></i></a>
+            </div>
+        </article>
+    </main>
+    <footer class="border-t border-slate-200 bg-slate-50 py-8 text-center text-xs text-slate-500">
+        <a href="../index.html#projects" class="font-semibold text-green-800 hover:text-green-900">← Return to all projects</a>
+    </footer>
+</body>
+</html>
